@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "AVuun8S9KPKs1wrO6cso6ckuL/Fvp7YiLCgOTMM6+J++0Mc5+T/xJczmbJRTpW0fmS5lZJMMuh03HDARnN5Yxw==",
+  "success": true,
+  "projectFilePath": "/Users/anoncer/Github/zipstock/ZipStock.Desctop/ZipStock.Desctop.csproj",
+  "expectedPackageFiles": [
+    "/Users/anoncer/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "/Users/anoncer/.nuget/packages/microsoft.netcore.app.host.osx-x64/5.0.17/microsoft.netcore.app.host.osx-x64.5.0.17.nupkg.sha512",
+    "/Users/anoncer/.nuget/packages/microsoft.netcore.app.ref/5.0.0/microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
