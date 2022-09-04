@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1703.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipStock.Desctop", "ZipStock.Desctop\ZipStock.Desctop.csproj", "{1F98FA04-6348-413F-8311-86092D19ED75}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipStock.Desktop", "ZipStock.Desktop\ZipStock.Desktop.csproj", "{4C11EDD9-AA8E-4E51-9658-6AC8C778FE95}"
 EndProject
 Global
