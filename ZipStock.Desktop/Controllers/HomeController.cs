@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using ZipStock.Desctop.Models;
+using ZipStock.Desktop.Models;
 
-namespace ZipStock.Desctop.Controllers
+namespace ZipStock.Desktop.Controllers
 {
     public class HomeController : Controller
     {

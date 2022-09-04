@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ZipStock.Desctop.Models
+namespace ZipStock.Desktop.Models
 {
     public class ErrorViewModel
     {

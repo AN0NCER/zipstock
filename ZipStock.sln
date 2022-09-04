@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1703.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipStock.Desctop", "ZipStock.Desctop\ZipStock.Desctop.csproj", "{1F98FA04-6348-413F-8311-86092D19ED75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipStock.Desktop", "ZipStock.Desktop\ZipStock.Desktop.csproj", "{4C11EDD9-AA8E-4E51-9658-6AC8C778FE95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1F98FA04-6348-413F-8311-86092D19ED75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F98FA04-6348-413F-8311-86092D19ED75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F98FA04-6348-413F-8311-86092D19ED75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C11EDD9-AA8E-4E51-9658-6AC8C778FE95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C11EDD9-AA8E-4E51-9658-6AC8C778FE95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C11EDD9-AA8E-4E51-9658-6AC8C778FE95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C11EDD9-AA8E-4E51-9658-6AC8C778FE95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

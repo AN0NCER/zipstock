@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace ZipStock.Desctop
+namespace ZipStock.Desktop
 {
     public class Program
     {
