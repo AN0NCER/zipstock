@@ -67,6 +67,10 @@ namespace ZipStock.Desktop
         {
             var window = await Electron.WindowManager.CreateWindowAsync();
             //Thi code control Electron Window
+            //Run this project
+            //electronize start
+            //If error
+            //electronize start /PublishReadyToRun false
         }
     }
 }
