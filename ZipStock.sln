@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1703.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipStock.Desktop", "ZipStock.Desktop\ZipStock.Desktop.csproj", "{4C11EDD9-AA8E-4E51-9658-6AC8C778FE95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipStock.Desktop", "ZipStock.Desktop\ZipStock.Desktop.csproj", "{982A9E9E-21EF-42A4-A99A-7ACCB38087E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,22 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1F98FA04-6348-413F-8311-86092D19ED75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F98FA04-6348-413F-8311-86092D19ED75}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F98FA04-6348-413F-8311-86092D19ED75}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1F98FA04-6348-413F-8311-86092D19ED75}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C11EDD9-AA8E-4E51-9658-6AC8C778FE95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C11EDD9-AA8E-4E51-9658-6AC8C778FE95}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C11EDD9-AA8E-4E51-9658-6AC8C778FE95}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C11EDD9-AA8E-4E51-9658-6AC8C778FE95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{982A9E9E-21EF-42A4-A99A-7ACCB38087E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{982A9E9E-21EF-42A4-A99A-7ACCB38087E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{982A9E9E-21EF-42A4-A99A-7ACCB38087E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{982A9E9E-21EF-42A4-A99A-7ACCB38087E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {86D0F34B-A63D-43AC-AB25-034895E6D179}
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		description = Program for archiving images and illustrations. Useful for stockers
+		SolutionGuid = {28CAB510-A636-4BED-A0FB-B3245308A4EA}
 	EndGlobalSection
 EndGlobal
