@@ -54,7 +54,7 @@ namespace ZipStock.Desktop
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapBlazorHub();
-                endpoints.MapFallbackToPage("/_Host");
+                endpoints.MapFallbackToPage("/_Load");
             });
 
             if (HybridSupport.IsElectronActive)
@@ -66,6 +66,7 @@ namespace ZipStock.Desktop
         async public void ElectronWindow()
         {
             var window = await Electron.WindowManager.CreateWindowAsync();
+            Global.browserWindow = window;
             //Thi code control Electron Window
             //Run this project
             //electronize start
