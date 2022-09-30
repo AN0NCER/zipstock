@@ -7,11 +7,15 @@ using ElectronNET.API;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.JSInterop;
+using ZipStock.Server;
 
 namespace ZipStock.Desktop.Pages.Authorization
 {
     public class _AuthModel : PageModel
     {
+        Verification verification = new Verification();
+        string Email { get; set; }
+
         public _AuthModel()
         {
             Electron.IpcMain.On("async-msg", (data) =>
@@ -20,8 +24,13 @@ namespace ZipStock.Desktop.Pages.Authorization
             });
 
             Electron.IpcMain.On("verification-email", (data)=>{
-                string email = (string)data;
-
+                Email = (string)data;
+                EmailResponse response = verification.VerificateEmail(Email);
+                if(response.StatusCode == System.Net.HttpStatusCode.OK || response.Server == 200)
+                {
+                    var mainWindow = Electron.WindowManager.BrowserWindows.First();
+                    Electron.IpcMain.Send(mainWindow, "code-verify", Email);
+                };
             });
         }
 

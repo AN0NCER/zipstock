@@ -27,7 +27,7 @@ body {
 
 main {
     position: absolute;
-    background: linear-gradient(180deg, #FFFFFF 0%, #F4F6F8 50%);
+    background: linear-gradient(180deg, #FFFFFF 0%, #F4F6F8 80%);
     top: 140px;
     bottom: 0;
     left: 0;
@@ -106,4 +106,33 @@ main {
     font-size: 16px;
     line-height: 22px;
     color: #7B7B7B;
+}
+
+.code_input {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+    .code_input > input {
+        width: 40px;
+        height: 40px;
+        border-radius: 7px;
+        border: 1px solid #DBDBDB;
+        margin: 0 5px;
+        text-align: center;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #808080;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+.centered {
+    text-align: center;
 }

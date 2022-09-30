@@ -12,11 +12,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ZipStock - Authorization</title>
+    <base href="~/auth" />
     <link href="css/authorization.css" rel="stylesheet" />
 </head>
 <body>
     <h1 class="shadow">ZipStock</h1>
-    <main>
+    <main class="emailverify">
         <div class="title">
             Enter you email
         </div>
@@ -24,6 +25,21 @@
         <input type="submit" value="Authorizate" class="submit" onclick="BtnClicked()">
         <div class="info">
             Enter your email to login to your account. If there is no account, he will create it.
+        </div>
+    </main>
+    <main style="display: none;" class="codeverify">
+        <div class="title centered">
+            Authorization Code
+        </div>
+        <div class="code_input">
+            <input type="text" name="" id="" maxlength="1" placeholder="C">
+            <input type="text" name="" id="" maxlength="1" placeholder="O">
+            <input type="text" name="" id="" maxlength="1" placeholder="D">
+            <input type="text" name="" id="" maxlength="1" placeholder="E">
+        </div>
+        <input type="submit" value="Login" class="submit">
+        <div class="info centered">
+            An authorization code should have been sent to the mail. If you can't find the email, check it in spam
         </div>
     </main>
     <!-- Insert this line above script imports  -->
