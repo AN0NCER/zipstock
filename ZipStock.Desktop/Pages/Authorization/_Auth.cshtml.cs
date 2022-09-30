@@ -21,6 +21,7 @@ namespace ZipStock.Desktop.Pages.Authorization
 
             Electron.IpcMain.On("verification-email", (data)=>{
                 string email = (string)data;
+
             });
         }
 
