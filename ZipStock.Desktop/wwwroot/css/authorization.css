@@ -1,0 +1,109 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    background: #F4F6F8;
+}
+
+.shadow {
+    text-align: center;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 96px;
+    line-height: 131px;
+    color: #E2E2E2;
+    margin-top: 50px;
+}
+
+main {
+    position: absolute;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F4F6F8 50%);
+    top: 140px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 340px;
+    box-shadow: 0px -4px 0px #4392FF;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #282828;
+}
+
+.email {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #949494;
+    border-radius: 7px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #808080;
+    padding-left: 10px;
+}
+
+.submit {
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    background: #4392FF;
+    border-radius: 7px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+    .submit:hover {
+        background: #67A6FE;
+    }
+
+.info {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7B7B7B;
+}

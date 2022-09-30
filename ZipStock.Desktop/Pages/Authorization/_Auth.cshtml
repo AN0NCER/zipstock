@@ -1,0 +1,35 @@
+﻿@page "/auth"
+@model ZipStock.Desktop.Pages.Authorization._AuthModel
+@namespace ZipStock.Desktop.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZipStock - Authorization</title>
+    <link href="css/authorization.css" rel="stylesheet" />
+</head>
+<body>
+    <h1 class="shadow">ZipStock</h1>
+    <main>
+        <div class="title">
+            Enter you email
+        </div>
+        <input type="email" placeholder="email@example.com" name="email" id="email" class="email">
+        <input type="submit" value="Authorizate" class="submit" onclick="BtnClicked()">
+        <div class="info">
+            Enter your email to login to your account. If there is no account, he will create it.
+        </div>
+    </main>
+    <!-- Insert this line above script imports  -->
+    <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="js/authorization.js"></script>
+    <script src="_framework/blazor.server.js"></script>
+</body>
+</html>
