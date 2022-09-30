@@ -23,4 +23,9 @@
     <Folder Include="Pages\Server\" />
     <Folder Include="wwwroot\js\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZipStock.Server\ZipStock.Server.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
