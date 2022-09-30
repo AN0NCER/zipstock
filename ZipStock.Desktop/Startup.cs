@@ -55,6 +55,7 @@ namespace ZipStock.Desktop
             {
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Load");
+                endpoints.MapFallbackToPage("~/user/{*clientroutes:nonfile}", "/_Auth");
             });
 
             if (HybridSupport.IsElectronActive)

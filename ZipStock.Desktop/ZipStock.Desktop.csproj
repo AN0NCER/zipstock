@@ -4,13 +4,23 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="ElectronNET.API" />
+    <None Remove="Pages\Authorization\" />
+    <None Remove="Pages\Server\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ElectronNET.API" Version="13.5.1" />
   </ItemGroup>
   <ItemGroup>
+    <Content Remove="wwwroot\js\" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Update="electron.manifest.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\Authorization\" />
+    <Folder Include="Pages\Server\" />
+    <Folder Include="wwwroot\js\" />
   </ItemGroup>
 </Project>
