@@ -15,10 +15,43 @@ function BtnClicked() {
     }
 };
 
+function CheckCode() {
+    let a, b, c, d;
+    a = $('.code_1').val();
+    b = $('.code_2').val();
+    c = $('.code_3').val();
+    d = $('.code_4').val();
+    if (a.length > 0 || b.length > 0 || c.length > 0 || d.length > 0) {
+        let code = `${a.toUpperCase()}${b.toUpperCase()}${c.toUpperCase()}${d.toUpperCase()}`;
+        ipcRenderer.send("verification-code", code);
+    }
+}
 
-ipcRenderer.on('code-verify', (event, args) => {
-    $('.emailverify').hide();
-    $('.codeverify').show();
+
+ipcRenderer.on('code-verify', async (event, args) => {
+    let active = $("main.active");
+    let disable = $("main:not(.active)");
+    active.removeClass('active');
+    await sleep(1000);
+    disable.addClass('active');
+});
+
+ipcRenderer.on('loading-code', async (event, args) => {
+    let form = $(".code_verify");
+    let loading = $(".code_loading");
+    if (form.hasClass("show")) {
+        form.removeClass("show");
+        await sleep(100);
+        loading.addClass("show");
+    } else {
+        loading.removeClass("show");
+        await sleep(100);
+        form.addClass("show");
+    }
+});
+
+ipcRenderer.on('logged-account', async (event, args) => {
+    window.location.href = "/";
 });
 
 
@@ -50,4 +83,9 @@ container.onkeyup = function (e) {
             }
         }
     }
+}
+
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }

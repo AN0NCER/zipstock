@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using ElectronNET.API;
 using Microsoft.AspNetCore.Components;
 using System.Threading;
+using System.IO;
+using System.Linq;
 
 namespace ZipStock.Desktop.Pages
 {
@@ -12,12 +14,22 @@ namespace ZipStock.Desktop.Pages
     {
         public _Load()
         {
-            //Global.browserWindow.LoadURL("https://zipstock.click");
+            Electron.IpcMain.On("load-account", (data) =>
+            {
+                var mainWindow = Electron.WindowManager.BrowserWindows.First();
+                if (System.IO.File.Exists(IO.Account))
+                {
+                    Electron.IpcMain.Send(mainWindow, "rediret-to", "/zip");
+                }
+                else
+                {
+                    Electron.IpcMain.Send(mainWindow, "rediret-to", "/auth");
+                }
+            });
         }
 
         public void OnGet()
         {
-            Thread.Sleep(1000);
         }
     }
 }

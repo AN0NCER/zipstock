@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace ZipStock.Desktop.Pages.Server
+namespace ZipStock.Desktop.Pages.Zipstock
 {
-    public class _EmailVerificationModel : PageModel
+    public class _ZipModel : PageModel
     {
         public void OnGet()
         {

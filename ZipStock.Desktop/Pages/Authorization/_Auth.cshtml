@@ -17,7 +17,20 @@
 </head>
 <body>
     <h1 class="shadow">ZipStock</h1>
-    <main class="emailverify">
+    <div class="cat">
+        <div class="ear ear--left"></div>
+        <div class="ear ear--right"></div>
+        <div class="face">
+            <div class="eye eye--left">
+                <div class="eye-pupil"></div>
+            </div>
+            <div class="eye eye--right">
+                <div class="eye-pupil"></div>
+            </div>
+            <div class="muzzle"></div>
+        </div>
+    </div>
+    <main class="active">
         <div class="title">
             Enter you email
         </div>
@@ -27,19 +40,28 @@
             Enter your email to login to your account. If there is no account, he will create it.
         </div>
     </main>
-    <main style="display: none;" class="codeverify">
-        <div class="title centered">
-            Authorization Code
+    <main>
+        <div class="code_verify show">
+            <div class="title centered">
+                Authorization Code
+            </div>
+            <div class="code_input">
+                <input type="text" class="code_1" maxlength="1" placeholder="C">
+                <input type="text" class="code_2" maxlength="1" placeholder="O">
+                <input type="text" class="code_3" maxlength="1" placeholder="D">
+                <input type="text" class="code_4" maxlength="1" placeholder="E">
+            </div>
+            <input type="submit" value="Login" class="submit" onclick="CheckCode()">
+            <div class="info centered">
+                An authorization code should have been sent to the mail. If you can't find the email, check it in spam
+            </div>
         </div>
-        <div class="code_input">
-            <input type="text" name="" id="" maxlength="1" placeholder="C">
-            <input type="text" name="" id="" maxlength="1" placeholder="O">
-            <input type="text" name="" id="" maxlength="1" placeholder="D">
-            <input type="text" name="" id="" maxlength="1" placeholder="E">
-        </div>
-        <input type="submit" value="Login" class="submit">
-        <div class="info centered">
-            An authorization code should have been sent to the mail. If you can't find the email, check it in spam
+        <div class="code_loading">
+            <div class="loader">
+                <span class="loader__element"></span>
+                <span class="loader__element"></span>
+                <span class="loader__element"></span>
+            </div>
         </div>
     </main>
     <!-- Insert this line above script imports  -->

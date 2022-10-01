@@ -5,10 +5,12 @@
   <ItemGroup>
     <None Remove="ElectronNET.API" />
     <None Remove="Pages\Authorization\" />
-    <None Remove="Pages\Server\" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Pages\Zipstock\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ElectronNET.API" Version="13.5.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\js\" />
@@ -20,8 +22,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\Authorization\" />
-    <Folder Include="Pages\Server\" />
     <Folder Include="wwwroot\js\" />
+    <Folder Include="Pages\Zipstock\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ZipStock.Server\ZipStock.Server.csproj">

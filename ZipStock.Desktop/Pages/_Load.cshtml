@@ -18,6 +18,18 @@
 <body>
     <component type="typeof(App)" render-mode="ServerPrerendered" />
     <script src="_framework/blazor.server.js"></script>
-    <script src="Redirect.js"></script>
+    <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        const { ipcRenderer } = require("electron");
+
+        $(document).ready(() => {
+            ipcRenderer.send("load-account");
+        });
+
+        ipcRenderer.on("rediret-to", (event, args) => {
+            window.location.href = args;
+        });
+    </script>
 </body>
 </html>

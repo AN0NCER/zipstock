@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.JSInterop;
 using ZipStock.Server;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace ZipStock.Desktop.Pages.Authorization
 {
@@ -15,6 +17,7 @@ namespace ZipStock.Desktop.Pages.Authorization
     {
         Verification verification = new Verification();
         string Email { get; set; }
+        string Code { get; set; }
 
         public _AuthModel()
         {
@@ -23,15 +26,40 @@ namespace ZipStock.Desktop.Pages.Authorization
                 Electron.Dialog.ShowMessageBoxAsync(data.ToString());
             });
 
-            Electron.IpcMain.On("verification-email", (data)=>{
+            Electron.IpcMain.On("verification-email", (data) =>
+            {
                 Email = (string)data;
                 EmailResponse response = verification.VerificateEmail(Email);
-                if(response.StatusCode == System.Net.HttpStatusCode.OK || response.Server == 200)
+                if (response.StatusCode == System.Net.HttpStatusCode.OK && response.Server == 200)
                 {
                     var mainWindow = Electron.WindowManager.BrowserWindows.First();
                     Electron.IpcMain.Send(mainWindow, "code-verify", Email);
                 };
             });
+
+            Electron.IpcMain.On("verification-code", async (data) =>
+            {
+                Code = (string)data;
+                var mainWindow = Electron.WindowManager.BrowserWindows.First();
+                Electron.IpcMain.Send(mainWindow, "loading-code");
+                CodeResponse response = verification.VerificateCode(Code, Email);
+                if (response.StatusCode == System.Net.HttpStatusCode.OK && response.Server == 200)
+                {
+                    SaveOAuth(response.Oauth);
+                    Electron.IpcMain.Send(mainWindow, "logged-account");
+                }else
+                {
+                    await Electron.Dialog.ShowMessageBoxAsync($"Error: {response.ErrorMessage}");
+                    Electron.IpcMain.Send(mainWindow, "loading-code");
+                }
+            });
+        }
+
+        public void SaveOAuth(string Oauth)
+        {
+            Account account = new Account();
+            account.Oauth = Oauth;
+            System.IO.File.WriteAllText(IO.Account, JsonConvert.SerializeObject(account));
         }
 
         public void OnGet()
